@@ -4,7 +4,7 @@
   "description": "WebdriverIO TypeScript boilerplate.",
   "scripts": {
     "build": "rm -rf ./build && tsc",
-    "test": "npm run build && wdio ./build/wdio.conf.js"
+    "test": "node node_modules/mocha/bin/_mocha --ui bdd build/specs/google-search.spec.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "@types/node": "^7.0.14",
     "@types/webdriverio": "^4.7.0",
     "chai": "^3.5.0",
+    "mocha": "^5.2.0",
     "typescript": "^2.3.2",
     "wdio-firefox-profile-service": "^0.0.3",
     "wdio-mocha-framework": "^0.5.10",
